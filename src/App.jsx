@@ -33,11 +33,12 @@ function App() {
       .catch((error) => console.error(error));
   }, []);
 
+  console.log("data in APP.jsx",data)
 
   return (
     <div className="App">
-      <JobFilter data={data} />
-      <JobResultsArea data={data} />
+      <JobFilter />
+      <JobResultsArea jobList={data.jdList} /> 
     </div>
   );
 }
