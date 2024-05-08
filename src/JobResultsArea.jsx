@@ -6,7 +6,11 @@ const JobResultsArea = ({jobList}) => {
     console.log(jobList, "jobList")
   return (
     <div className='job-results'>
-      <JobCard data={jobList[0]}/>
+      {
+        jobList?.map((job, index) => (
+          <JobCard key={index} data={job} />
+        ))
+      }
     </div>
   )
 }
